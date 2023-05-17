@@ -2,7 +2,7 @@
 /**
   *get_list_length-get the length of the doubly linked list
   *@list: pointer to the head of the list
-  @Return: length of the list
+  *Return: length of the list
   */
 int get_list_length(listint_t **list)
 {
