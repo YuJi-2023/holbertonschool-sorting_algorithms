@@ -4,6 +4,7 @@
   *@array: input array
   *@i: the index of the first integer
   *@j: the index of the second integer
+  *@size: size of the array
   *Return: void
   */
 void swap(int *array, int i, int j, size_t size)
