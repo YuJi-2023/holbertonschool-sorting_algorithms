@@ -6,13 +6,14 @@
   *@j: the index of the second integer
   *Return: void
   */
-void swap(int *array, int i, int j)
+void swap(int *array, int i, int j, size_t size)
 {
 	int tmp;
 
 	tmp = array[i];
 	array[i] = array[j];
 	array[j] = tmp;
+	print_array(array, size);
 }
 
 /**
@@ -39,14 +40,16 @@ int partition(int *array, int left, int right, size_t size)
 			i = i + 1;
 			if (i != j)
 			{
-				swap(array, i, j);
-				print_array(array, size);
+				swap(array, i, j, size);
 			}
 		}
 		j = j + 1;
 	}
 
-	swap(array, i + 1, right);
+	if (array[i + 1] != pivot)
+	{
+		swap(array, i + 1, right, size);
+	}
 	return (i + 1);
 }
 
